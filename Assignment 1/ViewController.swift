@@ -89,18 +89,28 @@ class ViewController: UIViewController {
     func performCalculation() -> Double {
         var result: Double
         switch lastOperator {
-         case "+":
-            result = previousNumber + currentNumber
-         case "-":
-            result = previousNumber - currentNumber
-         case "/":
-            result = previousNumber / currentNumber
-         case "x":
-            result = previousNumber * currentNumber
-         case "%":
-            result = previousNumber.truncatingRemainder(dividingBy: currentNumber)
-         default:
-            result = Double(resultLabel.text!)!
+            case "+":
+                result = previousNumber + currentNumber
+            case "-":
+                result = previousNumber - currentNumber
+            case "/":
+                result = previousNumber / currentNumber
+            case "x":
+                result = previousNumber * currentNumber
+            case "%":
+                result = previousNumber.truncatingRemainder(dividingBy: currentNumber)
+            case "Sin":
+                result = sin(previousNumber * Double.pi / 180.0)
+            case "Cos":
+                result = cos(previousNumber * Double.pi / 180.0)
+            case "Tan":
+                result = tan(previousNumber * Double.pi / 180.0)
+            case "√":
+                result = sqrt(previousNumber)
+            case "∏":
+                result = previousNumber * Double.pi
+            default:
+                result = Double(resultLabel.text!)!
         }
         print("previousNumber: \(previousNumber) \(lastOperator) currentNumber: \(currentNumber) = \(result)")
         return result
