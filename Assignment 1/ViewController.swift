@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Assignment 2:  Calculator App - Part 2 - Basic Calculator Functions
+//  Assignment 3:  Calculator App - Part 3 – Additional Functions
 //
 //  Created by Masum Modi on 2020-09-30.
 //  Copyright © 2020 Centennial College. All rights reserved.
